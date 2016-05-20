@@ -1,7 +1,9 @@
 package test;
 
+import java.util.List;
 import java.util.Scanner;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -22,6 +24,9 @@ public class Test1 {
 	int choix = sc.nextInt();
 		if (choix == 0){
 			ajoutWS();
+		}
+		if (choix == 1){
+			searchWS();
 		}
 		else {
 			System.out.println("ce choix n'est pas disponible");	
@@ -59,6 +64,21 @@ public class Test1 {
 				System.out.println("WS sauvegardé");
 				session.close();
 		return null;
+	}
+	
+	public static void searchWS(){
+		
+		Configuration config = new Configuration();
+		SessionFactory sessionFactory = config.configure().buildSessionFactory();
+			
+		// Ouverture session
+				Session session = sessionFactory.openSession() ;
+				session.close();
+				session = sessionFactory.openSession();
+				Transaction tx = session.beginTransaction();
+				Query query = session.createQuery("from WebService");
+				List result = query.list();
+				System.out.println(result);
 	}
 
 }

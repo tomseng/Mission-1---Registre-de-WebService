@@ -38,6 +38,12 @@ public class WebService {
 	public void setIdWS(int idWS) {
 		this.idWS = idWS;
 	}
+	@Override
+	public String toString() {
+		return "WebService [idWS=" + idWS + ", nomWS=" + nomWS + ", typeWS=" + typeWS + ", commentaireWS="
+				+ commentaireWS + "]";
+	}
+
 	public WebService(String nomWS, String typeWS, String commentaireWS) {
 		super();
 		this.nomWS = nomWS;

@@ -6,7 +6,7 @@
     <class name="modele.WebService" table="WEBSERVICE">
         <id name="idWS" type="int">
             <column name="IDWS" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="nomWS" type="java.lang.String">
             <column name="NOMWS" />
