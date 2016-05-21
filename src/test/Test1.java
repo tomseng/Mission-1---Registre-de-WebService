@@ -55,8 +55,8 @@ public class Test1 {
 				Query query = session.createQuery("from WebService where nomWS = :nom");
 				Scanner sc = new Scanner(System.in);
 				System.out.println("saisir nom du ws");
-				String nomCine = sc.nextLine();
-				query.setString("nom", nomCine);
+				String nomduWS = sc.nextLine();
+				query.setString("nom", nomduWS);
 				List result = query.list();
 				System.out.println(result);
 				session.close();	}
