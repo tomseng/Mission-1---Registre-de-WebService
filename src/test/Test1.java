@@ -17,10 +17,10 @@ public class Test1 {
 	public static void main(String[] args) throws Exception {
 		
 		String menu = "Bienvenue dans l'espace d'ajout de WS "+  "\n" +  "\n" 
-		+" 0 - Ajouter un Web Service" +  "\n" 
-	    + " 1 - Afficher tous les Web Services répertoriés dans le registre " + "\n"
-		+ " 2 - Afficher les détails d'un Web Service" +  "\n"
-	    + "Choisissez un chiffre pour utiliser une fonctionnalité";
+		+ " 0 - Ajouter un Web Service" +  "\n" 
+	    + " 1 - Afficher tous les Web Services rÃ©pertoriÃ©s dans le registre " + "\n"
+		+ " 2 - Afficher les dÃ©tails d'un Web Service" +  "\n"
+	    + "Choisissez un chiffre pour utiliser une fonctionnalitÃ©";
 			System.out.println(menu);
 
 		Scanner sc = new Scanner(System.in);
@@ -84,10 +84,10 @@ public class Test1 {
 				sc.close();
 
 				session.save(wbs1);
-				System.out.println("Nouveau Web Service ajouté!");
+				System.out.println("Nouveau Web Service ajoutï¿½!");
 				
 				tx.commit();
-				System.out.println("WS sauvegardé");
+				System.out.println("WS sauvegardï¿½");
 				session.close();
 	}
 	
