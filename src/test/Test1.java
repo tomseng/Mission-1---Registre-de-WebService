@@ -39,7 +39,7 @@ public class Test1 {
 		default:
 			System.out.println(menu);
 		}
-		}
+	}
 	
 	
 	public static void searchWSbyName(){
@@ -59,7 +59,8 @@ public class Test1 {
 				query.setString("nom", nomduWS);
 				List result = query.list();
 				System.out.println(result);
-				session.close();	}
+				session.close();
+	}
 	
 	public static void ajoutWS(){
 		Configuration config = new Configuration();
@@ -97,14 +98,15 @@ public class Test1 {
 		SessionFactory sessionFactory = config.configure().buildSessionFactory();
 			
 		// Ouverture session
-				Session session = sessionFactory.openSession() ;
-				session.close();
-				session = sessionFactory.openSession();
-				Transaction tx = session.beginTransaction();
-				Query query = session.createQuery("from WebService");
-				List result = query.list();
-				System.out.println(result);
-				session.close();
+		Session session = sessionFactory.openSession() ;
+		session.close();
+		session = sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from WebService");
+		List result = query.list();
+		System.out.println(result);
+		session.close();
+		
 	}
 
 }
